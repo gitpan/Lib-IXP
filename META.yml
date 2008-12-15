@@ -1,0 +1,13 @@
+--- #YAML:1.0
+name:                Lib-IXP
+version:             0.10
+abstract:            binding for libixp
+license:             artistic
+author:              
+    - GomoR <perl@gomor.org>
+generated_by:        ExtUtils::MakeMaker version 6.44
+distribution_type:   module
+requires:     
+meta-spec:
+    url:     http://module-build.sourceforge.net/META-spec-v1.3.html
+    version: 1.3
