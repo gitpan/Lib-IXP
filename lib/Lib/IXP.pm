@@ -1,10 +1,10 @@
 #
-# $Id: IXP.pm 14 2008-12-15 21:33:32Z gomor $
+# $Id: IXP.pm 18 2010-06-03 13:50:07Z gomor $
 #
 package Lib::IXP;
 use strict; use warnings;
 
-our $VERSION = '0.10';
+our $VERSION = '0.11';
 
 use Exporter;
 use DynaLoader;
@@ -127,7 +127,7 @@ Patrice E<lt>GomoRE<gt> Auffret
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (c) 2008, Patrice E<lt>GomoRE<gt> Auffret
+Copyright (c) 2008-2010, Patrice E<lt>GomoRE<gt> Auffret
 
 You may distribute this module under the terms of the Artistic license.
 See LICENSE.Artistic file in the source distribution archive.

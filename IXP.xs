@@ -1,5 +1,5 @@
 /*
- * $Id: IXP.xs 8 2008-05-22 16:34:12Z gomor $
+ * $Id: IXP.xs 18 2010-06-03 13:50:07Z gomor $
  */
 
 #include "EXTERN.h"
@@ -212,12 +212,12 @@ xls(socket, file)
       char *socket
       char *file
    INIT:
-      IxpClient *client;
-      IxpStat *stat;
-      IxpCFid *fid;
-      AV *out;
+      IxpClient *client = NULL;
+      IxpStat *stat = NULL;
+      IxpCFid *fid = NULL;
+      AV *out = NULL;
       int nstat, mstat, count, i;
-      char *buf;
+      char *buf = NULL;
       IxpMsg m;
    CODE:
       client = ixp_mount(socket);
@@ -269,7 +269,9 @@ xls(socket, file)
       }
       RETVAL = newRV_noinc((SV *)out);
       ixp_unmount(client);
-      free(fid);
+      if (fid != NULL) {
+         free(fid);
+      }
    OUTPUT:
       RETVAL
 
